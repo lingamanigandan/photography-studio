@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="studio.css">
+    <title>SMILE PHOTOGRAPHY STUDIO</title>
+</head>
+
+<body>
+
+    <!-- STEP 1 GOES RIGHT HERE: SPLASH SCREEN ANIMATION -->
+    <div id="splash-screen">
+        <img src="gemini-svg.svg" alt="Smile Photography Studio Logo" class="splash-logo">
+    </div>
+    <!-- END OF STEP 1 -->
+
+    <header>
+        <!-- Logo linked to home -->
+        <a href="/">
+            <img src="gemini-svg.svg" alt="Smile Photography Studio Logo" width="160" height="120" />
+        </a>
+
+        <!-- Updated to match the logo branding -->
+        <h1>SMILE Photography Studio</h1>
+        <p>Professional Photography & Videography</p>
+
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#services">Services</a> |
+            <a href="#gallery">Gallery</a> |
+            <a href="#booking">Booking</a> |
+            <a href="#feedback">Feedback</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- The rest of your website sections (home, about, etc.) continue below... -->
+
+
+<!-- HOME -->
+
+<section id="home">
+
+    <h2>Capture Your Beautiful Moments</h2>
+
+    <p>
+        Welcome to LensCraft Photography Studio.
+        We capture weddings, portraits, events,
+        fashion and unforgettable memories.
+    </p>
+
+    <img src="images/studio.jpg"
+         alt="LensCraft Photography Studio"
+         width="600">
+
+</section>
+
+<hr>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2>About Us</h2>
+
+    <p>
+        SMILE Photography Studio provides professional
+        photography and videography services for weddings,
+        birthdays, events, portraits, fashion and products.
+    </p>
+
+    <h3>Our Specialties</h3>
+
+    <ul>
+        <li>Wedding Photography</li>
+        <li>Portrait Photography</li>
+        <li>Event Photography</li>
+        <li>Fashion Photography</li>
+        <li>Product Photography</li>
+        <li>Professional Videography</li>
+    </ul>
+
+</section>
+
+<hr>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <h2>Our Services</h2>
+
+    <table border="1" cellpadding="10">
+
+        <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Starting Price</th>
+        </tr>
+
+        <tr>
+            <td>Wedding Photography</td>
+            <td>Complete wedding photography</td>
+            <td>₹25,000</td>
+        </tr>
+
+        <tr>
+            <td>Portrait Photography</td>
+            <td>Professional portrait session</td>
+            <td>₹3,000</td>
+        </tr>
+
+        <tr>
+            <td>Event Photography</td>
+            <td>Birthday and event photography</td>
+            <td>₹8,000</td>
+        </tr>
+
+        <tr>
+            <td>Product Photography</td>
+            <td>Professional product photographs</td>
+            <td>₹5,000</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<hr>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+    <h2>Photography Gallery</h2>
+
+    <img src="images/wedding.jpg"
+         alt="Wedding Photography"
+         width="250">
+
+    <img src="images/portrait.jpg"
+         alt="Portrait Photography"
+         width="250">
+
+    <img src="images/fashion.jpg"
+         alt="Fashion Photography"
+         width="250">
+
+    <br><br>
+
+    <img src="images/event.jpg"
+         alt="Event Photography"
+         width="250">
+
+    <img src="images/product.jpg"
+         alt="Product Photography"
+         width="250">
+
+    <img src="images/birthday.jpg"
+         alt="Birthday Photography"
+         width="250">
+
+</section>
+
+<hr>
+
+
+<!-- BOOKING -->
+
+<section id="booking">
+
+    <h2>Photography Booking</h2>
+
+    <form action="#" method="post">
+
+        <!-- NAME -->
+
+        <label for="name">
+            Full Name:
+        </label>
+
+        <br>
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+            minlength="3"
+            maxlength="50"
+            pattern="[A-Za-z ]+"
+            title="Name should contain only letters and spaces">
+
+        <p>
+            Example: Lingamanigandan Ramalingam
+        </p>
+
+
+        <!-- EMAIL -->
+
+        <label for="email">
+            Email Address:
+        </label>
+
+        <br>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required>
+
+        <p>
+            Enter a valid email address.
+        </p>
+
+
+        <!-- EMAIL VERIFICATION -->
+
+        <h3>Email Verification</h3>
+
+        <p>
+            Enter the verification code sent to your email.
+        </p>
+
+        <label for="verification">
+            Verification Code:
+        </label>
+
+        <br>
+
+        <input
+            type="text"
+            id="verification"
+            name="verification"
+            placeholder="Enter 6-digit code"
+            maxlength="6"
+            pattern="[0-9]{6}"
+            inputmode="numeric">
+
+        <br><br>
+
+        <button type="button">
+            Send Verification Code
+        </button>
+
+        <button type="button">
+            Verify Email
+        </button>
+
+
+        <br><br>
+
+
+        <!-- PHONE -->
+
+        <label for="phone">
+            Phone Number:
+        </label>
+
+        <br>
+
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+91 98765 43210"
+            required
+            pattern="[0-9+ -]{10,15}">
+
+
+        <br><br>
+
+
+        <!-- SERVICE -->
+
+        <label for="service">
+            Select Service:
+        </label>
+
+        <br>
+
+        <select id="service" name="service" required>
+
+            <option value="">
+                -- Select Service --
+            </option>
+
+            <option value="wedding">
+                Wedding Photography
+            </option>
+
+            <option value="portrait">
+                Portrait Photography
+            </option>
+
+            <option value="event">
+                Event Photography
+            </option>
+
+            <option value="fashion">
+                Fashion Photography
+            </option>
+
+            <option value="product">
+                Product Photography
+            </option>
+
+        </select>
+
+
+        <br><br>
+
+
+        <!-- DATE -->
+
+        <label for="date">
+            Photography Date:
+        </label>
+
+        <br>
+
+        <input
+            type="date"
+            id="date"
+            name="date"
+            required>
+
+
+        <br><br>
+
+
+        <!-- MESSAGE -->
+
+        <label for="message">
+            Additional Requirements:
+        </label>
+
+        <br>
+
+        <textarea
+            id="message"
+            name="message"
+            rows="6"
+            cols="50"
+            placeholder="Tell us about your photography requirements">
+        </textarea>
+
+
+        <br><br>
+
+
+        <!-- TERMS -->
+
+        <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            required>
+
+        <label for="terms">
+            I agree to the booking terms and conditions.
+        </label>
+
+
+        <br><br>
+
+        <button type="submit">
+            Submit Booking
+        </button>
+
+        <button type="reset">
+            Clear Form
+        </button>
+
+    </form>
+
+</section>
+
+<hr>
+
+
+<!-- FEEDBACK -->
+
+<section id="feedback">
+
+    <h2>Customer Feedback</h2>
+
+    <p>
+        We would love to hear about your experience
+        with LensCraft Photography Studio.
+    </p>
+
+
+    <form action="#" method="post">
+
+        <!-- NAME -->
+
+        <label for="feedbackName">
+            Your Name:
+        </label>
+
+        <br>
+
+        <input
+            type="text"
+            id="feedbackName"
+            name="feedbackName"
+            placeholder="Enter your name"
+            required
+            minlength="3"
+            pattern="[A-Za-z ]+"
+            title="Please enter a valid name">
+
+
+        <br><br>
+
+
+        <!-- EMAIL -->
+
+        <label for="feedbackEmail">
+            Your Email:
+        </label>
+
+        <br>
+
+        <input
+            type="email"
+            id="feedbackEmail"
+            name="feedbackEmail"
+            placeholder="example@gmail.com"
+            required>
+
+
+        <br><br>
+
+
+        <!-- RATING -->
+
+        <label>
+            How would you rate our service?
+        </label>
+
+        <br><br>
+
+        <input
+            type="radio"
+            id="rating1"
+            name="rating"
+            value="1"
+            required>
+
+        <label for="rating1">1 - Poor</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="rating2"
+            name="rating"
+            value="2">
+
+        <label for="rating2">2 - Fair</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="rating3"
+            name="rating"
+            value="3">
+
+        <label for="rating3">3 - Good</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="rating4"
+            name="rating"
+            value="4">
+
+        <label for="rating4">4 - Very Good</label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="rating5"
+            name="rating"
+            value="5">
+
+        <label for="rating5">5 - Excellent</label>
+
+
+        <br><br>
+
+
+        <!-- FEEDBACK TYPE -->
+
+        <label for="feedbackType">
+            Feedback Type:
+        </label>
+
+        <br>
+
+        <select
+            id="feedbackType"
+            name="feedbackType"
+            required>
+
+            <option value="">
+                -- Select Feedback Type --
+            </option>
+
+            <option value="photography">
+                Photography Quality
+            </option>
+
+            <option value="service">
+                Customer Service
+            </option>
+
+            <option value="booking">
+                Booking Experience
+            </option>
+
+            <option value="pricing">
+                Pricing
+            </option>
+
+            <option value="website">
+                Website
+            </option>
+
+            <option value="other">
+                Other
+            </option>
+
+        </select>
+
+
+        <br><br>
+
+
+        <!-- FEEDBACK MESSAGE -->
+
+        <label for="feedbackMessage">
+            Your Feedback:
+        </label>
+
+        <br>
+
+        <textarea
+            id="feedbackMessage"
+            name="feedbackMessage"
+            rows="8"
+            cols="60"
+            placeholder="Write your feedback here..."
+            required
+            minlength="10">
+        </textarea>
+
+
+        <br><br>
+
+
+        <!-- RECOMMENDATION -->
+
+        <label>
+            Would you recommend our studio?
+        </label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="yes"
+            name="recommend"
+            value="yes"
+            required>
+
+        <label for="yes">
+            Yes
+        </label>
+
+        <br>
+
+        <input
+            type="radio"
+            id="no"
+            name="recommend"
+            value="no">
+
+        <label for="no">
+            No
+        </label>
+
+
+        <br><br>
+
+
+        <!-- SUBMIT -->
+
+        <button type="submit">
+            Submit Feedback
+        </button>
+
+        <button type="reset">
+            Clear Feedback
+        </button>
+
+    </form>
+
+</section>
+
+<hr>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2>Contact Us</h2>
+
+    <address>
+
+        <strong>
+            SMILE Photography Studio
+        </strong>
+
+        <br><br>
+
+        123 Main Road
+        <br>
+
+        Coimbatore, Tamil Nadu
+        <br>
+
+        India
+
+        <br><br>
+
+        Phone:
+        <a href="tel:+919360388560">
+            +91 98765 43210
+        </a>
+
+        <br>
+
+        Email:
+        <a href="mailto:info@smilestudio.com">
+            info@lenscraftstudio.com
+        </a>
+
+    </address>
+
+</section>
+
+<hr>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>SMILE Photography Studio</h3>
+
+    <p>
+        Capturing Moments. Creating Memories.
+    </p>
+
+    <p>
+        <a href="#home">Home</a> |
+        <a href="#about">About</a> |
+        <a href="#services">Services</a> |
+        <a href="#gallery">Gallery</a> |
+        <a href="#booking">Booking</a> |
+        <a href="#feedback">Feedback</a> |
+        <a href="#contact">Contact</a>
+    </p>
+
+    <p>
+        © 2026 LensCraft Photography Studio.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>

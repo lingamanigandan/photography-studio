@@ -1,0 +1,517 @@
+/* ==========================================================================
+   Base Styles & Typography
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FAF9F6; /* Ivory background to match logo */
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Hide default HTML horizontal rules to replace with clean CSS spacing */
+hr {
+    display: none;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+header {
+    background-color: #222222; /* Deep Charcoal */
+    color: #FAF9F6;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-bottom: 4px solid #C5A880; /* Premium Gold accent */
+}
+
+header a img {
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+header a img:hover {
+    transform: scale(1.05);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+    color: #C5A880;
+}
+
+header p {
+    font-style: italic;
+    color: #A0A0A0;
+    margin-bottom: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: #FAF9F6;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #C5A880;
+}
+
+/* Remove standard text pipe dividers from HTML formatting via pseudo-classes */
+nav {
+    color: transparent; 
+}
+
+/* ==========================================================================
+   General Section Layout
+   ========================================================================== */
+section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #222222;
+    margin-bottom: 2rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Decorative underline for section headers */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #C5A880;
+    margin: 15px auto 0;
+}
+
+h3 {
+    color: #4A4A4A;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.4rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem auto;
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+ul li {
+    background: #222222;
+    color: #C5A880;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Images & Gallery Grid
+   ========================================================================== */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+#home img {
+    margin-top: 2rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* CSS Grid for the Gallery */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding-top: 1rem;
+}
+
+/* Force the h2 to span all columns in the grid */
+#gallery h2 {
+    grid-column: 1 / -1;
+}
+
+#gallery img {
+    width: 100%;
+    height: 250px; /* Uniform height */
+    object-fit: cover; /* Prevents stretching */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#gallery img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Remove br tags in gallery since grid handles layout */
+#gallery br {
+    display: none;
+}
+
+/* ==========================================================================
+   Pricing Table
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 18px 15px;
+    text-align: center;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+th {
+    background-color: #222222;
+    color: #C5A880;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background-color: #F9F9F9;
+}
+
+tr:hover td {
+    background-color: #F0F0F0;
+}
+
+/* ==========================================================================
+   Forms (Booking & Feedback)
+   ========================================================================== */
+form {
+    background: #FFFFFF;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    font-weight: 600;
+    color: #222222;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Standardize all input fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 25px;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #FAFAFA;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #C5A880;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.2);
+}
+
+/* Hide form instruction paragraphs, make them look like hints */
+form p {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+form br {
+    display: none; /* Clean up HTML breaks for better CSS control */
+}
+
+/* Radio & Checkbox styling */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    accent-color: #C5A880;
+    transform: scale(1.1);
+}
+
+/* Buttons */
+button {
+    background-color: #222222;
+    color: #FAF9F6;
+    padding: 14px 28px;
+    border: 2px solid #222222;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #C5A880;
+    border-color: #C5A880;
+    color: #222222;
+}
+
+button[type="reset"] {
+    background-color: transparent;
+    color: #222222;
+    border-color: #D1D1D1;
+}
+
+button[type="reset"]:hover {
+    background-color: #F0F0F0;
+    border-color: #222222;
+}
+
+/* ==========================================================================
+   Contact Details
+   ========================================================================== */
+address {
+    font-style: normal;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+address strong {
+    font-size: 1.3rem;
+    color: #222222;
+}
+
+address a {
+    color: #C5A880;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+    background-color: #222222;
+    color: #A0A0A0;
+    text-align: center;
+    padding: 4rem 20px 2rem;
+    margin-top: 5rem;
+    border-top: 4px solid #C5A880;
+}
+
+footer h3 {
+    color: #C5A880;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    margin-bottom: 1.5rem;
+}
+
+footer a {
+    color: #FAF9F6;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #C5A880;
+}
+
+/* Remove text pipes from footer nav */
+footer p:nth-of-type(2) {
+    color: transparent;
+}
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    form {
+        padding: 25px 15px;
+    }
+    
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    th {
+        display: none; /* Hide table headers on mobile */
+    }
+    
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+    }
+    
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    
+    /* Add labels to mobile table rows */
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: 700;
+        color: #222222;
+    }
+}
+/* ==========================================================================
+   Splash Screen Entry Animation
+   ========================================================================== */
+
+/* Lock scrolling while the animation plays */
+body {
+    animation: unlockScroll 0s 3s forwards;
+    overflow: hidden; 
+}
+
+/* The full-screen overlay */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #222222; /* Premium Charcoal background */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Slides up and disappears after 2.5 seconds */
+    animation: slideUpReveal 0.8s cubic-bezier(0.77, 0, 0.175, 1) 2.2s forwards;
+}
+
+/* The logo inside the splash screen */
+.splash-logo {
+    width: 250px;
+    opacity: 0;
+    transform: scale(0.85); /* Starts slightly smaller */
+    
+    /* Fades in and scales up smoothly */
+    animation: logoFocus 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+/* --- Animation Keyframes --- */
+
+/* 1. Logo fades in and scales to normal size */
+@keyframes logoFocus {
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+/* 2. Splash screen slides up to reveal website */
+@keyframes slideUpReveal {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+        visibility: hidden; /* Removes it from blocking clicks */
+    }
+}
+
+/* 3. Unlocks the page scroll after the splash screen is gone */
+@keyframes unlockScroll {
+    to {
+        overflow: visible;
+        overflow-x: hidden;
+    }
+}
